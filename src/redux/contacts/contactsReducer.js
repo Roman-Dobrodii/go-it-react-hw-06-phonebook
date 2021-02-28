@@ -16,7 +16,7 @@ const items = (state = [], action) => {
 
 const filter = (state = '', action) => {
   switch (action.type) {
-    case actionTypes.FILTER:
+    case actionTypes.CHANGE_FILTER:
       return action.payload.filter;
 
     default:
