@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styles from './ContactsList.module.css';
 import ContactsListItems from '../contactsListItem/ContactsListItems';
-import actions from '../../redux/contacts/contactsActions';
 import { connect } from 'react-redux';
 
 class ContactsList extends Component {
@@ -38,11 +37,7 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  onContactDelete: id => dispatch(actions.deleteContact(id)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ContactsList);
+export default connect(mapStateToProps)(ContactsList);
 
 // const mapStateToProps = state => {
 //   return {
